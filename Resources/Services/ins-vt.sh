@@ -13,7 +13,7 @@ chronyc tracking -v
 date
 
 # install v2ray
-wget https://raw.githubusercontent.com/SasukexSakura/AutoScriptDebian10/main/Resources/Services/go.sh && chmod +x go.sh && ./go.sh
+wget https://raw.githubusercontent.com/JanganCrut/Deb9-10/main/Resources/Services/go.sh && chmod +x go.sh && ./go.sh
 rm -f /root/go.sh
 mkdir /root/.acme.sh
 curl https://acme-install.netlify.app/acme.sh -o /root/.acme.sh/acme.sh
