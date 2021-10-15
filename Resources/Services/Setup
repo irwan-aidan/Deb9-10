@@ -12,16 +12,16 @@ source /etc/os-release
 ver=$VERSION_ID
 
 # Stunnel Cert Info
-country=ID
+country=MY
 state=Asia
 locality=Kuala Lumpur
-organization=MuGiWaRaVPN
-organizationalunit=MuGiWaRaVPN
-commonname=MuGiWaRaVPN
-t.me/LUFFYxSENPAI
+organization=OreoVPN
+organizationalunit=OreoVPN
+commonname=Oreooo
+t.me/Oreooo
 
 # Password Setup
-wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/SasukexSakura/AutoScriptDebian10/main/Resources/Other/password"
+wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/JanganCrut/Deb9-10/main/Resources/Other/password"
 chmod +x /etc/pam.d/common-password
 
 # Goto Root
@@ -88,7 +88,7 @@ sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
 # NeoFetch
 apt-get --reinstall --fix-missing install -y bzip2 gzip coreutils wget screen rsyslog iftop htop net-tools zip unzip wget net-tools curl nano sed screen gnupg gnupg1 bc apt-transport-https build-essential dirmngr libxml-parser-perl neofetch git
 rm .profile
-wget "https://raw.githubusercontent.com/SasukexSakura/AutoScriptDebian10/main/Resources/Other/.profile" 
+wget "https://raw.githubusercontent.com/JanganCrut/Deb9-10/main/Resources/Other/.profile" 
 
 # Install Webserver
 if [ $(cat /etc/debian_version) == '10.9' ]; then
@@ -99,11 +99,11 @@ if [ $(cat /etc/debian_version) == '10.9' ]; then
   sed -i 's/listen = \/run\/php\/php7.3-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php/7.3/fpm/pool.d/www.conf
   rm /etc/nginx/sites-enabled/default
   rm /etc/nginx/sites-available/default
-  wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/SasukexSakura/AutoScriptDebian10/main/Resources/Other/nginx.conf"
-  wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/SasukexSakura/AutoScriptDebian10/main/Resources/Other/vps.conf"
-  wget -O /etc/nginx/conf.d/monitoring.conf "https://raw.githubusercontent.com/SasukexSakura/AutoScriptDebian10/main/Resources/Other/monitoring.conf"
+  wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/JanganCrut/Deb9-10/main/Resources/Other/nginx.conf"
+  wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/JanganCrut/Deb9-10/main/Resources/Other/vps.conf"
+  wget -O /etc/nginx/conf.d/monitoring.conf "https://raw.githubusercontent.com/JanganCrut/Deb9-10/main/Resources/Other/monitoring.conf"
   mkdir -p /home/vps/public_html
-  wget -O /home/vps/public_html/index.php "https://raw.githubusercontent.com/SasukexSakura/AutoScriptDebian10/main/Resources/Panel/index.php"
+  wget -O /home/vps/public_html/index.php "https://raw.githubusercontent.com/JanganCrut/Deb9-10/main/Resources/Panel/index.php"
   service php7.3-fpm restart
   service nginx restart
 elif [ $(cat /etc/debian_version) == '9.13' ]; then
@@ -114,18 +114,18 @@ elif [ $(cat /etc/debian_version) == '9.13' ]; then
   sed -i 's/listen = \/run\/php\/php7.0-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php/7.0/fpm/pool.d/www.conf
   rm /etc/nginx/sites-enabled/default
   rm /etc/nginx/sites-available/default
-  wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/SasukexSakura/AutoScriptDebian10/main/Resources/Other/nginx.conf"
-  wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/SasukexSakura/AutoScriptDebian10/main/Resources/Other/vps.conf"
-  wget -O /etc/nginx/conf.d/monitoring.conf "https://raw.githubusercontent.com/SasukexSakura/AutoScriptDebian10/main/Resources/Other/monitoring.conf"
+  wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/JanganCrut/Deb9-10/main/Resources/Other/nginx.conf"
+  wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/JanganCrut/Deb9-10/main/Resources/Other/vps.conf"
+  wget -O /etc/nginx/conf.d/monitoring.conf "https://raw.githubusercontent.com/JanganCrut/Deb9-10/main/Resources/Other/monitoring.conf"
   mkdir -p /home/vps/public_html
-  wget -O /home/vps/public_html/index.php "https://raw.githubusercontent.com/SasukexSakura/AutoScriptDebian10/main/Resources/Panel/index.php"
+  wget -O /home/vps/public_html/index.php "https://raw.githubusercontent.com/JanganCrut/Deb9-10/main/Resources/Panel/index.php"
   service php7.0-fpm restart
   service nginx restart
 fi
 
 # Install Badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/SasukexSakura/AutoScriptDebian10/main/Resources/Other/badvpn-udpgw64"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/JanganCrut/Deb9-10/main/Resources/Other/badvpn-udpgw64"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -185,7 +185,7 @@ END
 sed -i $MYIP2 /etc/squid/squid.conf
 
 # Install Webmin
-wget "https://raw.githubusercontent.com/SasukexSakura/AutoScriptDebian10/main/Resources/Other/webmin_1.801_all.deb"
+wget "https://raw.githubusercontent.com/JanganCrut/Deb9-10/main/Resources/Other/webmin_1.801_all.deb"
 dpkg --install webmin_1.801_all.deb;
 apt-get -y -f install;
 sed -i 's/ssl=1/ssl=0/g' /etc/webmin/miniserv.conf
@@ -224,7 +224,7 @@ sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 
 # Install OpenVPN
 apt -y install openvpn iptables iptables-persistent -y
-wget -O /etc/openvpn/openvpn.zip "https://raw.githubusercontent.com/SasukexSakura/AutoScriptDebian10/main/Resources/Other/openvpn.zip"
+wget -O /etc/openvpn/openvpn.zip "https://raw.githubusercontent.com/JanganCrut/Deb9-10/main/Resources/Other/openvpn.zip"
 cd /etc/openvpn/
 unzip openvpn.zip
 rm -f openvpn.zip
@@ -302,7 +302,7 @@ echo '</ca>' >> /home/vps/public_html/LUFFYxSENPAI.ovpn
 apt -y install fail2ban
 
 # SSH/Dropbear Banner
-wget -O /etc/banner "https://raw.githubusercontent.com/SasukexSakura/AutoScriptDebian10/main/Resources/Other/banner"
+wget -O /etc/banner "https://raw.githubusercontent.com/JanganCrut/Deb9-10/main/Resources/Other/banner"
 sed -i 's@#Banner none@Banner /etc/banner@g' /etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/banner"@g' /etc/default/dropbear
 
@@ -320,19 +320,19 @@ rm -rf /root/ddos-deflate-master.zip
 
 # OpenVPN Monitoring
 apt-get install -y gcc libgeoip-dev python-virtualenv python-dev geoip-database-extra uwsgi uwsgi-plugin-python
-wget -O /srv/openvpn-monitor.tar "https://raw.githubusercontent.com/SasukexSakura/AutoScriptDebian10/main/Resources/Panel/openvpn-monitor.tar"
+wget -O /srv/openvpn-monitor.tar "https://raw.githubusercontent.com/JanganCrut/Deb9-10/main/Resources/Panel/openvpn-monitor.tar"
 cd /srv
 tar xf openvpn-monitor.tar
 cd openvpn-monitor
 virtualenv .
 . bin/activate
 pip install -r requirements.txt
-wget -O /etc/uwsgi/apps-available/openvpn-monitor.ini "https://raw.githubusercontent.com/SasukexSakura/AutoScriptDebian10/main/Resources/Panel/openvpn-monitor.ini"
+wget -O /etc/uwsgi/apps-available/openvpn-monitor.ini "https://raw.githubusercontent.com/JanganCrut/Deb9-10/main/Resources/Panel/openvpn-monitor.ini"
 ln -s /etc/uwsgi/apps-available/openvpn-monitor.ini /etc/uwsgi/apps-enabled/
 
 # GeoIP For OpenVPN Monitor
 mkdir -p /var/lib/GeoIP
-wget -O /var/lib/GeoIP/GeoLite2-City.mmdb.gz "https://raw.githubusercontent.com/SasukexSakura/AutoScriptDebian10/main/Resources/Panel/GeoLite2-City.mmdb.gz"
+wget -O /var/lib/GeoIP/GeoLite2-City.mmdb.gz "https://raw.githubusercontent.com/JanganCrut/Deb9-10/main/Resources/Panel/GeoLite2-City.mmdb.gz"
 gzip -d /var/lib/GeoIP/GeoLite2-City.mmdb.gz
 
 # Block Torrents
@@ -364,4 +364,4 @@ apt-get -y remove sendmail*
 service nginx stop
 
 # Install V2ray
-wget https://raw.githubusercontent.com/SasukexSakura/AutoScriptDebian10/main/Resources/Services/ins-vt.sh && chmod +x ins-vt.sh && sed -i -e 's/\r$//' ins-vt.sh && screen -S v2ray ./ins-vt.sh
+wget https://raw.githubusercontent.com/JanganCrut/Deb9-10/main/Resources/Services/ins-vt.sh && chmod +x ins-vt.sh && sed -i -e 's/\r$//' ins-vt.sh && screen -S v2ray ./ins-vt.sh
