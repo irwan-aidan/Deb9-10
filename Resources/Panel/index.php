@@ -1,11 +1,11 @@
 <?php
 /* Site Data */
-$site_name        = "DK VPS";
+$site_name        = "Oreooo VPS";
 $site_description = "Premium VPN/SSH/SSL Accounts Fast And Reliable Servers";
 $site_template    = "flatly"; // (flatly, darkly, sketchy, lumen, materia)
 $site_ip_address = "serverip"; // set site ip
-$site_paypal = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5MSCPA9T748GL"; // set site paypal donate link
-$site_contact = "https://m.facebook.com/joash.singh.90"; // set site contact us link
+$site_paypal = "https://www.paypal.me/Critozy"; // set site paypal donate link
+$site_contact = "https://m.facebook.com/taufiqhidayat.hidayat.792"; // set site contact us link
 $daily_limit_user = "90"; // set daily limit
 
 
@@ -23,7 +23,7 @@ $port_ssh= '22'; 		                // SSH Ports
 $port_dropbear= '109, 143'; 	         	// Dropbear Ports
 $port_ssl= '442';                               // SSL Ports
 $port_squid= '3128, 8080';        	       	// Squid Ports
-$ovpn_client= ''.$hosts.'/Dopekid.ovpn';        // OpenVPN Client Config
+$ovpn_client= ''.$hosts.'/Oreooo.ovpn';        // OpenVPN Client Config
 
 function trthe($Bajm)
 { 
