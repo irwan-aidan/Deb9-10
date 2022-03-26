@@ -11,12 +11,12 @@ ver=$VERSION_ID
 
 #detail nama perusahaan
 country=MY
-state=Sabah
-locality=KotaKinabalu
-organization=kaizenvpn
-organizationalunit=kaizenvpn
-commonname=kaizenvpn
-email=hafizmasidsmurfdota@gmail.com
+state=Kuala-Lumpur
+locality=Wangsa-Maju
+organization=AidanVPN
+organizationalunit=AidanVPN
+commonname=AidanVPN
+email=irwan@aidan.my
 
 # simple password minimal
 wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/Apeachsan91/server/main/password"
@@ -86,14 +86,14 @@ apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/Apeachsan91/server/main/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/nginx.conf"
 mkdir -p /home/vps/public_html
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/Apeachsan91/server/main/vps.conf"
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/vps.conf"
 /etc/init.d/nginx restart
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/Apeachsan91/server/main/badvpn-udpgw64"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/badvpn-udpgw64"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -123,7 +123,7 @@ echo "/usr/sbin/nologin" >> /etc/shells
 # install squid
 cd
 apt -y install squid3
-wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/Apeachsan91/server/main/squid3.conf"
+wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/squid3.conf"
 sed -i $MYIP2 /etc/squid/squid.conf
 
 # setting vnstat
@@ -232,28 +232,28 @@ netfilter-persistent reload
 
 # download script
 cd /usr/bin
-wget -O add-host "https://raw.githubusercontent.com/Apeachsan91/server/main/add-host.sh"
-wget -O about "https://raw.githubusercontent.com/Apeachsan91/server/main/about.sh"
-wget -O menu "https://raw.githubusercontent.com/Apeachsan91/server/main/menu.sh"
-wget -O add-cff "https://raw.githubusercontent.com/Apeachsan91/server/main/add-cff.sh"
-wget -O add-cfh "https://raw.githubusercontent.com/Apeachsan91/server/main/add-cfh.sh"
-wget -O add-dom "https://raw.githubusercontent.com/Apeachsan91/server/main/add-dom.sh"
-wget -O usernew "https://raw.githubusercontent.com/Apeachsan91/server/main/usernew.sh"
-wget -O user-passwd "https://raw.githubusercontent.com/Apeachsan91/server/main/user-passwd.sh"
-wget -O trial "https://raw.githubusercontent.com/Apeachsan91/server/main/trial.sh"
-wget -O hapus "https://raw.githubusercontent.com/Apeachsan91/server/main/hapus.sh"
-wget -O member "https://raw.githubusercontent.com/Apeachsan91/server/main/member.sh"
-wget -O delete "https://raw.githubusercontent.com/Apeachsan91/server/main/delete.sh"
-wget -O cek "https://raw.githubusercontent.com/Apeachsan91/server/main/cek.sh"
-wget -O restart "https://raw.githubusercontent.com/Apeachsan91/server/main/restart.sh"
-wget -O speedtest "https://raw.githubusercontent.com/Apeachsan91/server/main/speedtest_cli.py"
-wget -O info "https://raw.githubusercontent.com/Apeachsan91/server/main/info.sh"
-wget -O ram "https://raw.githubusercontent.com/Apeachsan91/server/main/ram.sh"
-wget -O renew "https://raw.githubusercontent.com/Apeachsan91/server/main/renew.sh"
-wget -O autokill "https://raw.githubusercontent.com/Apeachsan91/server/main/autokill.sh"
-wget -O ceklim "https://raw.githubusercontent.com/Apeachsan91/server/main/ceklim.sh"
-wget -O tendang "https://raw.githubusercontent.com/Apeachsan91/server/main/tendang.sh"
-#wget -O clear-log "https://raw.githubusercontent.com/Apeachsan91/server/main/clear-log.sh"
+wget -O add-host "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/add-host.sh"
+wget -O about "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/about.sh"
+wget -O menu "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/menu.sh"
+wget -O add-cff "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/add-cff.sh"
+wget -O add-cfh "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/add-cfh.sh"
+wget -O add-dom "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/add-dom.sh"
+wget -O usernew "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/usernew.sh"
+wget -O user-passwd "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/user-passwd.sh"
+wget -O trial "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/trial.sh"
+wget -O hapus "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/hapus.sh"
+wget -O member "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/member.sh"
+wget -O delete "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/delete.sh"
+wget -O cek "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/cek.sh"
+wget -O restart "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/restart.sh"
+wget -O speedtest "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/speedtest_cli.py"
+wget -O info "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/info.sh"
+wget -O ram "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/ram.sh"
+wget -O renew "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/renew.sh"
+wget -O autokill "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/autokill.sh"
+wget -O ceklim "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/ceklim.sh"
+wget -O tendang "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/tendang.sh"
+wget -O clear-log "https://raw.githubusercontent.com/Apeachsan91/server/main/clear-log.sh"
 wget -O change-port "https://raw.githubusercontent.com/Apeachsan91/server/main/change.sh"
 wget -O port-ovpn "https://raw.githubusercontent.com/Apeachsan91/server/main/port-ovpn.sh"
 wget -O port-ssl "https://raw.githubusercontent.com/Apeachsan91/server/main/port-ssl.sh"
