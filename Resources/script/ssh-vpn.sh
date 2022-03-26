@@ -19,7 +19,7 @@ commonname=AidanVPN
 email=irwan@aidan.my
 
 # simple password minimal
-wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/Apeachsan91/server/main/password"
+wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/password"
 chmod +x /etc/pam.d/common-password
 
 # go to root
@@ -177,7 +177,7 @@ sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 /etc/init.d/stunnel4 restart
 
 #OpenVPN
-wget https://raw.githubusercontent.com/Apeachsan91/server/main/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+wget https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
 # install fail2ban
 apt -y install fail2ban
@@ -253,20 +253,20 @@ wget -O renew "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resour
 wget -O autokill "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/autokill.sh"
 wget -O ceklim "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/ceklim.sh"
 wget -O tendang "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/tendang.sh"
-wget -O clear-log "https://raw.githubusercontent.com/Apeachsan91/server/main/clear-log.sh"
-wget -O change-port "https://raw.githubusercontent.com/Apeachsan91/server/main/change.sh"
-wget -O port-ovpn "https://raw.githubusercontent.com/Apeachsan91/server/main/port-ovpn.sh"
-wget -O port-ssl "https://raw.githubusercontent.com/Apeachsan91/server/main/port-ssl.sh"
-wget -O port-wg "https://raw.githubusercontent.com/Apeachsan91/server/main/port-wg.sh"
-wget -O port-tr "https://raw.githubusercontent.com/Apeachsan91/server/main/port-tr.sh"
-wget -O port-sstp "https://raw.githubusercontent.com/Apeachsan91/server/main/port-sstp.sh"
-wget -O port-squid "https://raw.githubusercontent.com/Apeachsan91/server/main/port-squid.sh"
-wget -O port-ws "https://raw.githubusercontent.com/Apeachsan91/server/main/port-ws.sh"
-wget -O port-vless "https://raw.githubusercontent.com/Apeachsan91/server/main/port-vless.sh"
-wget -O wbmn "https://raw.githubusercontent.com/Apeachsan91/server/main/webmin.sh"
-wget -O xp "https://raw.githubusercontent.com/Apeachsan91/server/main/xp.sh"
-wget -O update "https://raw.githubusercontent.com/Apeachsan91/server/main/update.sh"
-#wget -O kernel-updt "https://raw.githubusercontent.com/Apeachsan91/server/main/kernel-update.sh"
+wget -O clear-log "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/clear-log.sh"
+wget -O change-port "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/change.sh"
+wget -O port-ovpn "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/port-ovpn.sh"
+wget -O port-ssl "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/port-ssl.sh"
+wget -O port-wg "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/port-wg.sh"
+wget -O port-tr "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/port-tr.sh"
+wget -O port-sstp "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/port-sstp.sh"
+wget -O port-squid "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/port-squid.sh"
+wget -O port-ws "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/port-ws.sh"
+wget -O port-vless "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/port-vless.sh"
+wget -O wbmn "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/webmin.sh"
+wget -O xp "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/xp.sh"
+wget -O update "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/update.sh"
+#wget -O kernel-updt "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/kernel-update.sh"
 chmod +x add-host
 chmod +x menu
 chmod +x add-cff
