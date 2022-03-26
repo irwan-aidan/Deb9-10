@@ -17,25 +17,25 @@ exit 0
 fi
 mkdir /var/lib/premium-script;
 echo "IP=" >> /var/lib/premium-script/ipvps.conf
-wget https://notabug.org/irwanmohi/freesc/raw/main/cf.sh && chmod +x cf.sh && ./cf.sh
+wget https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/cf.sh && chmod +x cf.sh && ./cf.sh
 #install ssh ovpn
-wget https://notabug.org/irwanmohi/freesc/raw/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
-wget https://notabug.org/irwanmohi/freesc/raw/main/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
+wget https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
 #install ssr
-wget https://notabug.org/irwanmohi/freesc/raw/main/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
-wget https://notabug.org/irwanmohi/freesc/raw/main/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
+wget https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
+wget https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
 #installwg
-wget https://notabug.org/irwanmohi/freesc/raw/main/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
+wget https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
 #install v2ray
-wget https://notabug.org/irwanmohi/freesc/raw/main/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
+wget https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
 #install L2TP
-wget https://notabug.org/irwanmohi/freesc/raw/main/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
-wget https://notabug.org/irwanmohi/freesc/raw/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+wget https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
+wget https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 # Install Neofetch 
-wget https://notabug.org/irwanmohi/freesc/raw/main/geo.sh && chmod +x geo.sh && ./geo.sh && dos2unix /usr/bin/geo.sh
+wget https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/geo.sh && chmod +x geo.sh && ./geo.sh && dos2unix /usr/bin/geo.sh
 #install edu
-wget https://notabug.org/irwanmohi/freesc/raw/main/websocket.sh && chmod +x websocket.sh && ./websocket.sh
-wget https://notabug.org/irwanmohi/freesc/raw/main/edu.sh && chmod +x edu.sh && screen -S edu ./edu.sh
+wget https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/websocket.sh && chmod +x websocket.sh && ./websocket.sh
+wget https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/edu.sh && chmod +x edu.sh && screen -S edu ./edu.sh
 
 rm -f /root/ssh-vpn.sh
 rm -f /root/sstp.sh
@@ -63,7 +63,7 @@ WantedBy=multi-user.target
 EOF
 systemctl daemon-reload
 systemctl enable autosett
-wget -O /etc/set.sh "https://notabug.org/irwanmohi/freesc/raw/main/set.sh"
+wget -O /etc/set.sh "https://raw.githubusercontent.com/irwan-aidan/Deb9-10/main/Resources/script/set.sh"
 chmod +x /etc/set.sh
 history -c
 echo "1.2" > /home/ver
